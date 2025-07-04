@@ -6,6 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CompeteEarn - Earn Tuition Through Competitions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+    
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #f7f8fc;
+        color: #333;
+        overflow-x: hidden;
+      }
+    
+      /* Animation Keyframes */
+      @keyframes fadeSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      @keyframes floatParticles {
+        0% {
+          transform: translateY(0px);
+          opacity: 0.7;
+        }
+        50% {
+          transform: translateY(-15px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 0.7;
+        }
+      }
+    
+      @keyframes popIn {
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    
+      /* Hero Content Animation */
+      .hero-title,
+      .hero-subtitle,
+      .hero-buttons {
+        animation: fadeSlideIn 1s ease-out forwards;
+        opacity: 0;
+      }
+    
+      .hero-title {
+        animation-delay: 0.2s;
+      }
+    
+      .hero-subtitle {
+        animation-delay: 0.4s;
+      }
+    
+      .hero-buttons {
+        animation-delay: 0.6s;
+      }
+    
+      /* Particles Animation */
+      .particle {
+        width: 10px;
+        height: 10px;
+        background: #74b9ff;
+        border-radius: 50%;
+        position: absolute;
+        animation: floatParticles 4s ease-in-out infinite;
+      }
+    
+      .particle:nth-child(1) {
+        left: 20%;
+        top: 30%;
+        animation-delay: 0s;
+      }
+    
+      .particle:nth-child(2) {
+        left: 40%;
+        top: 60%;
+        animation-delay: 1s;
+      }
+    
+      .particle:nth-child(3) {
+        left: 60%;
+        top: 20%;
+        animation-delay: 2s;
+      }
+    
+      .particle:nth-child(4) {
+        left: 80%;
+        top: 50%;
+        animation-delay: 3s;
+      }
+    
+      .particle:nth-child(5) {
+        left: 50%;
+        top: 70%;
+        animation-delay: 4s;
+      }
+    
+      /* Button Hover Effects */
+      .btn {
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        cursor: pointer;
+      }
+    
+      .btn:hover {
+        transform: translateY(-3px);
+        background-color: #1e90ff;
+        color: #fff;
+      }
+    
+      /* Leaderboard Pop-in */
+      .leaderboard-item {
+        animation: popIn 0.8s ease-out both;
+        animation-delay: calc(0.2s * var(--rank));
+      }
+    
+      .leaderboard-item.rank-1 { --rank: 1; }
+      .leaderboard-item.rank-2 { --rank: 2; }
+      .leaderboard-item.rank-3 { --rank: 3; }
+    
+      /* Card Hover Scale */
+      .competition-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      .competition-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+    
+      /* Floating Card Animation */
+      .floating-card {
+        animation: floatParticles 5s ease-in-out infinite;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
@@ -264,7 +413,7 @@
         <div class="container">
           <div class="footer-content">
             <div class="footer-section">
-              <h3>CompeteEarn</h3>
+              <h3>Phiona</h3>
               <p>Empowering students through skill-based competitions</p>
             </div>
             <div class="footer-section">
@@ -279,15 +428,15 @@
             <div class="footer-section">
               <h4>Support</h4>
               <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="mailto:tinyejoe7@gmail.com">Help Center</a></li>
+                <li><a href="tel:+256757357680">Contact Us</a></li>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
           <div class="footer-bottom">
-            <p>&copy; 2024 CompeteEarn. All rights reserved.</p>
+            <p>&copy; 2025 Phiona. All rights reserved.</p>
           </div>
         </div>
       </footer>
